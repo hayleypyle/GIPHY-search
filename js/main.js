@@ -6,7 +6,7 @@ let searchContainer = document.querySelector('.js-container')
 let error = document.querySelector('.js-error-container')
 
 function giphySearch(searchTerms){
-fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=12`)
+fetch(`https://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=12`)
 .then (data => data.json())
 .then( response => {
     if (searchInput.value == " "){
