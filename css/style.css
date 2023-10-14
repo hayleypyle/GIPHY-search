@@ -104,10 +104,20 @@ input[type="search"]{
 .gif-container{
     margin:5% 0%;
     background-color:black;
-   
-
+    color:white;
+    font-size:1rem;
+    text-align:center;
 }
 
+.error-container{
+    background-color:black;
+    color:white;
+    font-size:1rem;
+    text-align:center;
+    width:30%;
+    align-self:center;
+
+}
 .grid-container{
     margin:3% 0%;
     height:130vh;

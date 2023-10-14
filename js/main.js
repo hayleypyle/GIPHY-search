@@ -3,11 +3,15 @@ const api_key ="cyOMBw01Y8fyiVDNEYTYZzRSfm0Va4Y2"
 let form = document.querySelector('.js-search-form')
 let searchInput = document.querySelector('[name=search-name]')
 let searchContainer = document.querySelector('.js-container')
+let error = document.querySelector('.js-error-container')
 
 function giphySearch(searchTerms){
 fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=12`)
 .then (data => data.json())
 .then( response => {
+    if (searchInput.value == " "){
+        throw 'Erroneous response'
+    } 
     let processedSearch = `<div class="grid-container">` + response.data
     .map(gif =>
 
@@ -17,6 +21,8 @@ fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&l
     </div>`
     )
     .join('')+ '</div>';
+    error.innerHTML = "";
+
     searchContainer.innerHTML = processedSearch;
     })
     .catch(err => {
@@ -28,8 +34,12 @@ fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&l
 function submitSearch(event){
     event.preventDefault();
     let searchTerms = searchInput.value
-    giphySearch(searchTerms);
-
+    if (searchTerms !== "") {
+        giphySearch(searchTerms);
+        searchInput.value = "";
+    } else {
+        error.innerHTML = `<p>Please enter a search term.</p>`;
+    }
 }
 
 form.addEventListener('submit', submitSearch);
