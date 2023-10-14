@@ -132,6 +132,7 @@ input[type="search"]{
 
     h1{
         font-size:2rem;
+     
     }
     .searchbar{
         margin-top:5%;
@@ -171,6 +172,10 @@ input[type="search"]{
 }
 
 @media screen and (max-width: 320px) {
+    h1{
+        color:black;
+        text-shadow:none;
+    }
     .grid-container{
         display: flex;
         flex-wrap:wrap;
