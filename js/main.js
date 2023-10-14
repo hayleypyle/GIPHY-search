@@ -8,15 +8,15 @@ function giphySearch(searchTerms){
 fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=20`)
 .then (data => data.json())
 .then( response => {
-    let processedSearch = `<td>` + response.data
+    let processedSearch = `<tr>` + response.data
     .map(gif =>
 
-    `<tr><iframe src="${gif.embed_url}" 
-    width="352" height="480" frameBorder="0" class="giphy-embed" 
+    `<td><iframe src="${gif.embed_url}" 
+    width="200" height="200" frameBorder="0" class="giphy-embed" 
     allowFullScreen></iframe>
-    <p><a href="${gif.url}">via GIPHY</a></p></tr>`
+    </td>`
     )
-    .join('')+ '</td>';
+    .join('')+ '</tr>';
     searchContainer.innerHTML = processedSearch;
     })
     .catch(err => {
