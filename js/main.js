@@ -5,14 +5,14 @@ let searchInput = document.querySelector('[name=search-name]')
 let searchContainer = document.querySelector('.js-container')
 
 function giphySearch(searchTerms){
-fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=16`)
+fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&limit=12`)
 .then (data => data.json())
 .then( response => {
     let processedSearch = `<div class="grid-container">` + response.data
     .map(gif =>
 
     `<div class="grid-item"><iframe src="${gif.embed_url}" 
-    width="250" height="250" frameBorder="0" class="giphy-embed" 
+    width="100%" height="auto" frameBorder="0" class="giphy-embed" 
     allowFullScreen></iframe>
     </div>`
     )

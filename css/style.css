@@ -103,7 +103,7 @@ input[type="search"]{
 
 .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 5%;
 
 }
@@ -157,13 +157,19 @@ input[type="search"]{
         justify-content: center;
         
     }
+
+    .topnav {
+        display:flex;
+        flex-direction: column;
+            }
+    
 }
 
 footer{
-   margin-top: auto;
-   padding:5%;
-   display:flex;
-   justify-content: center;
+    margin-top: auto;
+    padding:5%;
+    display:flex;
+    justify-content: center;
 }
 
 .watermark{
