@@ -7,6 +7,10 @@
 body{
     background-color:lightskyblue;
     font-family: 'Hanken Grotesk', sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    
 }
 
 h1{
@@ -40,6 +44,7 @@ h1{
     justify-content: center;
     flex-direction: column;
     margin-top:100px;
+    
 }
 
 .searchbar{
@@ -130,4 +135,15 @@ input[type="search"]{
         text-align:center;
     }
     
+}
+
+footer{
+   margin-top: auto;
+   display:flex;
+   justify-content: center;
+}
+
+.watermark{
+    width:300px;
+    margin-bottom:5%;
 }
