@@ -12,7 +12,7 @@ fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerms}&api_key=${api_key}&l
     .map(gif =>
 
     `<div class="grid-item"><iframe src="${gif.embed_url}" 
-    width="100%" height="auto" frameBorder="0" class="giphy-embed" 
+    width="100%" height="100%" frameBorder="0" class="giphy-embed" 
     allowFullScreen></iframe>
     </div>`
     )

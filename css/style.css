@@ -6,11 +6,11 @@
 }
 
 body{
-    background-color:lightskyblue;
     font-family: 'Hanken Grotesk', sans-serif;
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    background-image: url(./images/background2.jpg)
     
 }
 
@@ -21,7 +21,7 @@ h1{
 }
 
 .topnav {
-    background-color: #333;
+    background-color: black;
     overflow: hidden;
     font-family: 'Hanken Grotesk', sans-serif;
 }
@@ -97,11 +97,15 @@ input[type="search"]{
 
 }
 .gif-container{
-    margin:5%;
+    margin:5% 0%;
+    height:100%;
+    background-color:black;
 
 }
 
 .grid-container{
+    margin:3% 0%;
+    height:130vh;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 5%;
@@ -166,13 +170,13 @@ input[type="search"]{
 }
 
 footer{
+    height:30%;
     margin-top: auto;
-    padding:5%;
     display:flex;
     justify-content: center;
 }
 
 .watermark{
     width:300px;
-    margin-bottom:5%;
+    /* margin-bottom:5%; */
 }
