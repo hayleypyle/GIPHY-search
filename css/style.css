@@ -50,11 +50,14 @@ button{
     border-radius:20px;
     border:none;
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size:16px;
+    margin-left:5px;
 }
 
 button:hover{
     background-color: grey;
     color:white;
+    
 }
 
 .searchbar{
@@ -76,5 +79,6 @@ input[type="search"]{
     border-radius:20px;
     font-family: 'Hanken Grotesk', sans-serif;
     border:solid black 1px;
+    font-size:16px;
 
 }
