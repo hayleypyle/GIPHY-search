@@ -11,4 +11,4 @@ This is a website that can search for gifs using the GIPHY API.
     - The ability to scroll and see more gifs beyond 16. 
 
 # Website Link
-[https://hayleypyle.github.io/cgcwebsite/](https://hayleypyle.github.io/GIPHY-search/)
+[https://hayleypyle.github.io/GIPHY-search/](https://hayleypyle.github.io/GIPHY-search/)
